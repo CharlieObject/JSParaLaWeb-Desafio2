@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Web 3</title>
+</head>
+<body>
+  <h1>¡Ingrese la contraseña!</h1>
+  <div class="contenedor-web3">
+    <select id="primerdigito">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    <select id="segundodigito">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    <select id="tercerdigito">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+  </div>
+  <div class="h2span-web3">
+    <h2>Análisis:</h2>
+    <span id="span-web3" class="span-web3">esperando...</span>
+  </div>
+  <button onclick="
+  let valor1 = document.querySelector('#primerdigito');
+  let valor2 = valor1.value;
+
+  let valor3 = document.querySelector('#segundodigito');
+  let valor4 = valor3.value;
+
+  let valor5 = document.querySelector('#tercerdigito');
+  let valor6 = valor5.value;
+
+  if((valor2 + valor4 + valor6) === '911'){
+    let mostrar = document.querySelector('#span-web3');
+    mostrar.innerHTML = '¡¡contraseña uno correcta!!';
+    mostrar.style.fontSize = '25px';
+    mostrar.style.color = 'green';
+  }
+
+  if((valor2 + valor4 + valor6) === '714'){
+    let mostrar1 = document.querySelector('#span-web3');
+    mostrar1.innerHTML = '¡¡contraseña dos correcta!!';
+    mostrar1.style.fontSize = '25px';
+    mostrar1.style.color = 'green';
+  }
+
+  if( ((valor2 + valor4 + valor6) != '911')  &&  ((valor2 + valor4 + valor6) != '714')){
+
+    let mostrar2 = document.querySelector('#span-web3');
+    mostrar2.innerHTML = '¡contraseña incorrecta!';
+    mostrar2.style.fontSize = '25px';
+    mostrar2.style.color = 'red';
+
+  }
+
+  ">Ingresar</button>
+</body>
+</html>

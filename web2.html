@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Web 2</title>
+</head>
+<body class="body">
+  <h1 class="h1-web2">Puedes llevar máximo 10 stickers</h1>  
+  <div class="contenedor-web2">
+    <div class="contenedor-int-web2">
+      <p>Blizzard</p>
+      <img src="./assets/img/blizzard.jpg" alt="">
+      <input id="input1" type="text">
+    </div>
+    <div class="contenedor-int-web2">
+      <p>Dota2</p>
+      <img src="./assets/img/Dota2.jpg" alt="">
+      <input id="input2" type="text">
+    </div>
+    <div class="contenedor-int-web2">
+      <p>LOL</p>
+      <img src="./assets/img/lol.jpg" alt="">
+      <input id="input3" type="text">
+    </div>
+  </div>
+  <h2 class="h2-web2" id="h2-web2">Cantidad total: <span id="span-web2">0</span></h2>
+  <button id="button-verificar-web2" onclick="
+
+  let input1 = document.querySelector('#input1');
+  let valor1 = input1.value;
+  let input2 = document.querySelector('#input2');
+  let valor2 = input2.value;
+  let input3 = document.querySelector('#input3');
+  let valor3 = input3.value;
+
+  if((Number(valor1) + Number(valor2) + Number(valor3)) > 10){
+
+    let cambiospan = document.querySelector('#span-web2');
+    cambiospan.innerHTML = '¡excede el máximo!';
+    cambiospan.style.color = 'red';
+
+  }
+  
+  if((Number(valor1) + Number(valor2) + Number(valor3)) <= 10){
+
+    let cambiospan = document.querySelector('#span-web2');
+    cambiospan.innerHTML = ((Number(valor1) + Number(valor2) + Number(valor3)) + ' Sticker(s)');
+    cambiospan.style.color = 'green';
+
+  }
+
+  if((Number(valor1) + Number(valor2) + Number(valor3)) <= 0){
+
+    let cambiospan = document.querySelector('#span-web2');
+    cambiospan.innerHTML = 'debe seleccionar al menos una (1) cerveza';
+
+  }
+
+  ">Verificar</button>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>

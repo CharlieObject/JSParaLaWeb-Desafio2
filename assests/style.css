@@ -1,0 +1,29 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.contenedor {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los elementos */
+
+  }
+  
+  .card {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .boton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff; 
+    border: none; 
+    cursor: pointer;
+  }
+
+
+  .boton-container {
+    text-align: center; 
+  }

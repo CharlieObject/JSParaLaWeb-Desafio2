@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Web 1</title>
+</head>
+<body>
+  <div class="contenedor-imagen-web1">
+    <img src="./assets/img/DOTA2LOGO.jpeg" alt="" id="imagen-web1" onclick="
+      if(bandera == false){
+        let sinbordes = document.querySelector('#imagen-web1');
+        sinbordes.style.border = '0px';
+        let salud = document.querySelector('#span-web1');
+        salud.innerHTML = 'A JUGAR!!';
+        salud.style.color = 'white';
+        bandera = true;
+      }
+      else{
+        let conbordes = document.querySelector('#imagen-web1');
+        conbordes.style.border = '3px solid red';
+        let salud1 = document.querySelector('#span-web1');
+        salud1.innerHTML = 'A JUGAR!!';
+        salud1.style.color = 'red';
+        salud1.style.fontSize = '40px';
+
+        bandera = false; 
+      }">
+    <h2><span id="span-web1"></span></h2>
+  </div>
+  <script src="./assets/js/index.js"></script>      
+</body>
+</html>
